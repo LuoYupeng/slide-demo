@@ -1,68 +1,96 @@
-body,ul,li{
+body, ul, li {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-a{
+
+a {
     text-decoration: none;
 }
-ul,li{
-     list-style: none;
- }
 
-.wrapper{
-    position: relative;
-    top: 233px;
-    /*border: 1px solid black;*/
-    width: 440px;
-    height: 220px;
+ul, li {
+    list-style: none;
+}
+
+.window {
+    margin-top: 233px;
     margin-left: 373px;
-    border-radius: 4px;
-
 
 }
-ul{
-    position: absolute;
+
+.wrapper {
+    position: relative;
+    width: 440px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow:0px 2px 2px #c8c8c8 ;
+
+}
+
+.wrapper > .images {
     width: 440px;
     height: 220px;
     display: flex;
     align-items: flex-start;
-    overflow: hidden;
-    border-radius: 4px;
-    transition: all 0.5s;
+    transition: all 1.2s;
+    /*cursor:pointer*/
 }
 
 
-.wrapper > #buttons{
-    border:1px red solid;
+.wrapper > #buttons {
     z-index: 2;
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: 16px;
+    bottom: 12px;
+    line-height: 26px;
+    margin-bottom: 4px;
     display: flex;
     flex-flow: row;
-
     align-content: center;
+
 }
 
-.wrapper > #buttons > span{
-    display: inline-block;
-    margin-left: 10px;
-    width: 18px;
-    height: 18px;
-    background: #fff;
-    border-radius: 10px;
-    border: 1px solid #2090ff;
+.wrapper > #buttons > span {
+    cursor:pointer;
+    margin-left: 18px;
+    width: 8px;
+    height: 8px;
+    background: #f3fafd;
+    filter: blur(0.3px);
+    border-radius: 50%;
+    position: relative;
+    border: 1px white solid;
+}
+
+.wrapper > #buttons > span.svg{
+    pointer-events: none;
+    background-image: url("pacman.svg");
+    transform: scale(1.9);
+}
+.wrapper > #buttons > span:hover{
+
+    background: #339fd6;
+    transform: scale(1.5);
 }
 
 
 
-.wrapper >.title {
+.wrapper > .title {
     position: absolute;
     left: 0px;
     bottom: 0px;
-    padding-left:10px;
+    padding: 0 0 8px 10px;
+    line-height: 26px;
+    display: flex;
+    flex-direction: column;
+    width: 440px;
+    background: linear-gradient(transparent,rgba(0,0,0,.5));
+
 }
-.wrapper >.title > a{
-    display: none;
+
+.wrapper > .title > a {
+    color: #ffffff;
+    font-size: 14px;
+
 }
+
